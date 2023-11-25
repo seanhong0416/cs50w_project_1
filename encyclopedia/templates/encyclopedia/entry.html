@@ -9,7 +9,7 @@
         <h1>{{ title }}</h1>
         <a href="{% url 'encyclopedia:edit' entry=title %}">Edit</a>
         <br>
-        {{ content }}
+        {{ content|safe }}
     {% else %}
         <h1>This Entry Does Not Exist!</h1>
     {% endif %}
